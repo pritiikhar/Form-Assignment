@@ -13,12 +13,6 @@ const isAlphabetInput = (event) => {
 };
 
 
-const isAlphabetInputPhone = (event) => {
-    const key = event.keyCode;
-    return ((key >= 29 && key <= 54) || // Allow number line
-        (key === 62) // Allow space
-    );
-};
 
 
 
