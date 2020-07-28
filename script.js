@@ -1,6 +1,5 @@
 
-var mobNo = document.getElementById("phoneNumber");
-var mobEx = /^\d{10}$/;
+
 
 
 
@@ -52,6 +51,18 @@ const formatToPhone = (event) => {
 
 if(isModifierKey(event)) {return;}
     
+    var mobNo = document.getElementById("phoneNumber");
+    var mobEx = /^\d{10}$/;
+    if (mobEx.test(mobNo.value) == false)   
+        {  
+              document.getElementById("error").style.display = "block"; 
+              document.getElementById("error").innerHTML = "Mobile Number should conatain only numbers"; 
+        } 
+    else {
+         document.getElementById("error").style.display = "none"; 
+    }
+    
+    
     const target = event.target;
     value = target.value;
     const input = target.value.replace(/\D/g,'').substring(0,10); // First ten digits of input only
@@ -73,6 +84,7 @@ if(isModifierKey(event)) {return;}
 
 //Name Validation
 const formatToName = (event) => {
+    
     var name = document.getElementById("name");
     var nameEx = /^[a-zA-Z][a-zA-Z\\s]+$/;
     
@@ -85,7 +97,7 @@ document.getElementById("NameError").style.display = "block";
         document.getElementById("NameError").style.display = "";
   document.getElementById("submit").disabled = false;  
     }
-
+    
     const target =  event.target;
     const value = target.value;
     word = value.split(" ");
