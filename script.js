@@ -46,7 +46,14 @@ const formatMob = (event) => {
 
 const formatName = (event) => {
     // Input must be of a valid number format or a modifier key, and not longer than ten digits
-    if(!isAlphabetInput(event) && !isModifierKey(event) && !isAlphabetInputPhone(event)){
+    if(!isAlphabetInput(event) && !isModifierKey(event)){
+        event.preventDefault();
+    }
+};
+    
+    const formatNamePhone = (event) => {
+    // Input must be of a valid number format or a modifier key, and not longer than ten digits
+    if(!isAlphabetInputPhone(event)){
         event.preventDefault();
     }
 };
@@ -116,6 +123,7 @@ phoneNumber.addEventListener('keyup',formatToPhone);
 const name = document.getElementById('name');
 name.addEventListener('keydown',formatName);
 name.addEventListener('keyup',formatToName);
+name.addEventListener('keydown',formatNamePhone);    
 
 //------------------------------------------------------------------------------------------------------------------
 
