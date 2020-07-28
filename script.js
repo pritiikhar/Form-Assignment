@@ -45,7 +45,32 @@ if(isModifierKey(event)) {return;}
 };
 
 //Name Validation
+const formatToName = (event) => {
 
+    const target =  event.target;
+    const value = target.value;
+    word = value.split(" ");
+    var char = " ";
+    var i;
+if (word.length<2) {
+document.getElementById("NameError").innerHTML = "*Name should contain atleast two words";
+document.getElementById("submit").disabled = true;
+}
+else
+{
+document.getElementById("NameError").style.display = "none";
+document.getElementById("submit").disabled = false;
+}
+
+for(i = 0; i < word.length; i++){
+char = word[i].length + "<br>";
+if(word[i].length<4){
+  document.getElementById("NameError").innerHTML = "*Each word of name should cointain min 4 characters ";
+  document.getElementById("NameError").style.display = "block";
+  document.getElementById("submit").disabled = true;
+  }
+}    
+};
 
 
 
