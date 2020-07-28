@@ -1,9 +1,7 @@
-if (navigator.userAgent.match(/Android/i) == true ) {
-console.log("Phone"); 
-}
-else{
-console.log("PC"); 
-}
+
+var mobNo = document.getElementById("phoneNumber");
+var mobEx = /^\d{10}$/;
+
 
 
 const isNumericInput = (event) => {
@@ -75,6 +73,18 @@ if(isModifierKey(event)) {return;}
 
 //Name Validation
 const formatToName = (event) => {
+    var name = document.getElementById("name");
+    var nameEx = /^[a-zA-Z][a-zA-Z\\s]+$/;
+    
+    if (nameEx.test(name.value.toUpperCase()) == false ) {
+ document.getElementById("NameError").innerHTML = "*Name should contain alphabets and spaces only";
+document.getElementById("NameError").style.display = "block";
+  document.getElementById("submit").disabled = true;  
+}
+    else{
+        document.getElementById("NameError").style.display = "";
+  document.getElementById("submit").disabled = false;  
+    }
 
     const target =  event.target;
     const value = target.value;
@@ -113,10 +123,6 @@ phoneNumber.addEventListener('keyup',formatToPhone);
 const name = document.getElementById('name');
 name.addEventListener('keydown',formatName);
 name.addEventListener('keyup',formatToName);
-
-
-
-
 
 //------------------------------------------------------------------------------------------------------------------
 
