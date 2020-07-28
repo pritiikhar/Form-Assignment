@@ -102,6 +102,14 @@ const phoneNumber = document.getElementById('phoneNumber');
 phoneNumber.addEventListener('keydown',formatMob);
 phoneNumber.addEventListener('keyup',formatToPhone);
 
+const name = document.getElementById('name');
+name.addEventListener('keydown',formatName);
+name.addEventListener('keyup',formatToName);
+
+if (navigator.userAgent.match(/Android/i) == true ) {
+name.addEventListener('keydown',formatNamePhone);
+}
+
 
 
 
