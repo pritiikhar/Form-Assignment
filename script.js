@@ -5,6 +5,13 @@ const isNumericInput = (event) => {
     );
 };
 
+const isAlphabetInput = (event) => {
+    const key = event.keyCode;
+    return ((key >= 65 && key <= 90) || // Allow number line
+        (key === 32) // Allow space
+    );
+};
+
 const isModifierKey = (event) => {
     const key = event.keyCode;
     return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
