@@ -1,19 +1,4 @@
  if (navigator.userAgent.match(/Android/i) == true ) {
-const name = document.getElementById('name');
-name.addEventListener('keydown',formatNamePhone);
-     const isAlphabetInputPhone = (event) => {
-    const key = event.keyCode;
-    if (navigator.userAgent.match(/Android/i) == true ) {
-    return ((key >= 29 && key <= 54) || 
-        (key == 62) 
-    );
-};
-         const formatNamePhone = (event) => {
-    // Input must be of a valid number format or a modifier key, and not longer than ten digits
-    if(!isAlphabetInputPhone (event) && !isModifierKey(event)){
-        event.preventDefault();
-    }
-};
 document.getElementById("NameError").innerHTML = "Phone";
  }
 
