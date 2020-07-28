@@ -1,0 +1,55 @@
+<!docktype html>
+<html>
+<head>
+<title> Form </title> 
+<style>
+table {
+margin-top:5%;
+padding: 20px;
+}
+#errorMassege{
+color: red;
+}
+
+#p{
+color:#032a6b;
+font-size:75%;
+padding: 30px;
+}
+
+
+</style>
+</head>
+<body>
+<h1>Registration Form</h1>
+<div id ="formDiv">
+<form id = "form"> 
+<table>
+<tr><td><label for="name">Full Name</label></td>
+<td><input id="name" required /></td> </tr> 
+
+
+<tr><td><label for="name">Email</label></td>
+<td><input id="name" type = "email" required/> </td> <tr>
+<tr> 
+<span> 
+<td><label for="mobileNum" name = "mobile">Mobile Number</label></td>
+<td><input id="phoneNumber" required/></td>   
+<td><img id="comLogo" src="" width="107" height="98" style = "display:none; width:5%; height:5%; padding:0px">
+<p id = "p" style = "display:inline" > </p></span> </td></tr>
+</table></div>
+<div id = "errorMassege">
+<p id = "NameError"  ></p>
+<p id = "error"></p> </div>
+<button type="submit" id = "submit" >Submit</button></div>
+
+</form>
+<p id="message"></p>
+<p id="otp1"></p>
+
+
+<script src = "script.js">
+</script>
+
+</body>
+<html>

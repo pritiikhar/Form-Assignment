@@ -1,0 +1,43 @@
+<!docktype html>
+<html>
+<head>Verify OTP</head>
+<body>
+<p id = "load"></p>
+<input id="otp" name="otp" maxlength = "4" size = 6 placeholder = "Enter OTP" required>
+<button type = "submit" onclick = "otpValidate(); btnclick() ">ValidateOTP</button>
+<p id = "check"> </p>
+<script>
+var name = localStorage.getItem("firstName");
+var mobile = localStorage.getItem("mobileNum");
+
+document.getElementById("load").innerHTML = "Dear" + " " + name+ " " + "," + " " +
+ "Thank you for your enquiry.A 4 digit verification number has been sent to your phone number:" + " " + mobile +
+ " " + ", please enter in the following box and submit for confirmation:Text box for OTP and 'Validate' button. ";
+
+function otpValidate() {
+
+var generatedOtp = localStorage.getItem("otp");
+var enteredOtp = document.getElementById("otp").value;
+
+if(generatedOtp == enteredOtp ){
+document.getElementById("check").innerHTML = "Validation Successful!";
+location.replace("http://pixel6.co")
+}
+else{
+document.getElementById("check").innerHTML = "Incorrect OTP, Plz re-enter OTP and try again";
+document.getElementById("otp").value=" ";
+}
+
+}
+
+var counter = 0;
+function btnclick() {
+counter++;
+
+if(counter == 3){
+location.replace("http://pixel6.co/page")
+}
+}
+</script>
+</body>
+</html>
