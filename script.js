@@ -51,7 +51,7 @@ if(isModifierKey(event)) {return;}
     if (mobEx.test(mobNo.value) == false)   
         {  
               document.getElementById("error").style.display = "block"; 
-              document.getElementById("error").innerHTML = "Mobile Number should conatain only numbers";
+              document.getElementById("error").innerHTML = "*Mobile Number should conatain only numbers";
               document.getElementById("submit").disabled = true;  
         } 
     else {
@@ -82,18 +82,8 @@ if(isModifierKey(event)) {return;}
 //Name Validation
 const formatToName = (event) => {
     
-    var name = document.getElementById("name");
-    var nameEx = /^[a-zA-Z ]*$/;
-    
-    if (nameEx.test(name.value.toUpperCase()) == false ) {
- document.getElementById("Name_Error").innerHTML = "*Name should contain alphabets and spaces only";
- document.getElementById("submit").disabled = true;  
-}
-    else{
-        document.getElementById("Name_Error").style.display = "";
-        document.getElementById("submit").disabled = false;  
-    }
-    
+    const name = document.getElementById("name");
+    const nameEx = /^[a-zA-Z ]*$/;
     const target =  event.target;
     const value = target.value;
     word = value.split(" ");
@@ -116,7 +106,14 @@ if(word[i].length<4){
   document.getElementById("NameError").style.display = "block";
   document.getElementById("submit").disabled = true;
   }
-}    
+}   
+ if (nameEx.test(name.value.toUpperCase()) == false ) {
+ document.getElementById("Name_Error").innerHTML = "*Name should contain alphabets and spaces only";
+ document.getElementById("submit").disabled = true;  
+}
+    else{
+        document.getElementById("Name_Error").style.display = ""; 
+    }
 };
 
 
