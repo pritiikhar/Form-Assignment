@@ -12,6 +12,13 @@ const isAlphabetInput = (event) => {
     );
 };
 
+const isAlphabetInputPhone = (event) => {
+    const key = event.keyCode;
+    return ((key >= 29 && key <= 54) || // Allow number line
+        (key === 62) // Allow space
+    );
+};
+
 const isModifierKey = (event) => {
     const key = event.keyCode;
     return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
