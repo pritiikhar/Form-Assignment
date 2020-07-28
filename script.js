@@ -1,8 +1,3 @@
-
-
-
-
-
 const isNumericInput = (event) => {
     const key = event.keyCode;
     return ((key >= 48 && key <= 57) || // Allow number line
@@ -56,10 +51,12 @@ if(isModifierKey(event)) {return;}
     if (mobEx.test(mobNo.value) == false)   
         {  
               document.getElementById("error").style.display = "block"; 
-              document.getElementById("error").innerHTML = "Mobile Number should conatain only numbers"; 
+              document.getElementById("error").innerHTML = "Mobile Number should conatain only numbers";
+              document.getElementById("submit").disabled = true;  
         } 
     else {
          document.getElementById("error").style.display = "none"; 
+         document.getElementById("submit").disabled = false;  
     }
     
     
