@@ -34,6 +34,13 @@ const formatMob = (event) => {
     }
 };
 
+const formatName = (event) => {
+    // Input must be of a valid number format or a modifier key, and not longer than ten digits
+    if(!isAlphabetInput(event) && !isModifierKey(event)){
+        event.preventDefault();
+    }
+};
+
 //Mobile number validation
 const formatToPhone = (event) => {
 
