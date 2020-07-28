@@ -11,7 +11,7 @@ const isAlphabetInput = (event) => {
         (key === 32) // Allow space
     );
 
- if (navigator.userAgent.match(/Android/i)) {
+ if (navigator.userAgent.match(/Android/i) == true) {
 return ((key >= 29 && key <= 54) || // Allow number line
         (key === 62) // Allow space
     );
