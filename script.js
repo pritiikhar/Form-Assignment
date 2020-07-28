@@ -106,9 +106,6 @@ const name = document.getElementById('name');
 name.addEventListener('keydown',formatName);
 name.addEventListener('keyup',formatToName);
 
-if (navigator.userAgent.match(/Android/i) == true ) {
-name.addEventListener('keydown',formatNamePhone);
-}
 
 
 
