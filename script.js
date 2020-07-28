@@ -1,3 +1,11 @@
+if (navigator.userAgent.match(/Android/i) == true ) {
+document.getElementById("NameError").innerHTML = "Phone"; 
+}
+else{
+document.getElementById("NameError").innerHTML = "Ph"; 
+}
+
+
 const isNumericInput = (event) => {
     const key = event.keyCode;
     return ((key >= 48 && key <= 57) || // Allow number line
