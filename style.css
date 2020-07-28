@@ -1,0 +1,45 @@
+body{
+background-color:#f1fac0;
+}
+
+table {
+margin-left:40%;
+margin-top:5%;
+padding: 20px;
+}
+
+#errorMassege{
+color: red;
+margin-left:40%;
+}
+
+#p{
+color:#032a6b;
+font-size:75%;
+
+}
+
+h1{
+text-align: center;
+}
+
+#buttons{
+margin-left:45%;
+}
+
+#otp1{
+margin-left:45%;
+}
+
+#formDiv{
+
+height:50%;
+width:70%;
+margin-left:15%;
+background:#c2e01b;
+}
+
+#note{
+margin-left:15%;
+margin-top: 2%;
+}
