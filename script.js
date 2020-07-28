@@ -11,20 +11,11 @@ const isAlphabetInput = (event) => {
         (key === 32) // Allow space
     );
     
-    const isAlphabetInputPhone = (event) => {
+  const isAlphabetInputPhone = (event) => {
     const key = event.keyCode;
- if (navigator.userAgent.match(/Android/i) == true ) {
-return ((key >= 29 && key <= 54) || // Allow number line
+    return ((key >= 29 && key <= 54) || // Allow number line
         (key === 62) // Allow space
     );
-};
-
- if (navigator.userAgent.match(/Android/i) == true) {
-   document.getElementById("NameError").innerHTML = "*Phone"  
-return ((key >= 29 && key <= 54) || // Allow number line
-        (key === 62) // Allow space
-    );
-}
 };
 
 
@@ -116,9 +107,10 @@ phoneNumber.addEventListener('keyup',formatToPhone);
 const name = document.getElementById('name');
 name.addEventListener('keydown',formatName);
 name.addEventListener('keyup',formatToName);
-
-
-
+    
+    if (navigator.userAgent.match(/Android/i) == true ) {
+name.addEventListener('keydown',formatNamePhone);
+}
 //------------------------------------------------------------------------------------------------------------------
 
 function mobOptr(){
