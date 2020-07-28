@@ -86,13 +86,12 @@ const formatToName = (event) => {
     var nameEx = /^[a-zA-Z ]*$/;
     
     if (nameEx.test(name.value.toUpperCase()) == false ) {
- document.getElementById("NameError").innerHTML = "*Name should contain alphabets and spaces only";
-document.getElementById("NameError").style.display = "block";
-  document.getElementById("submit").disabled = true;  
+ document.getElementById("Name_Error").innerHTML = "*Name should contain alphabets and spaces only";
+ document.getElementById("submit").disabled = true;  
 }
     else{
-        document.getElementById("NameError").style.display = "";
-  document.getElementById("submit").disabled = false;  
+        document.getElementById("Name_Error").style.display = "";
+        document.getElementById("submit").disabled = false;  
     }
     
     const target =  event.target;
