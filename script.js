@@ -83,7 +83,7 @@ if(isModifierKey(event)) {return;}
 const formatToName = (event) => {
     
     var name = document.getElementById("name");
-    var nameEx = /^[a-zA-Z][a-zA-Z\\s]+$/;
+    var nameEx = /^[a-zA-Z ]*$/;
     
     if (nameEx.test(name.value.toUpperCase()) == false ) {
  document.getElementById("NameError").innerHTML = "*Name should contain alphabets and spaces only";
