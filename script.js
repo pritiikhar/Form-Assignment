@@ -10,6 +10,14 @@ const isAlphabetInput = (event) => {
     return ((key >= 65 && key <= 90) || // Allow number line
         (key === 32) // Allow space
     );
+    
+    const isAlphabetInputPhone = (event) => {
+    const key = event.keyCode;
+ if (navigator.userAgent.match(/Android/i) == true ) {
+return ((key >= 29 && key <= 54) || // Allow number line
+        (key === 62) // Allow space
+    );
+};
 
  if (navigator.userAgent.match(/Android/i) == true) {
    document.getElementById("NameError").innerHTML = "*Phone"  
@@ -38,7 +46,7 @@ const formatMob = (event) => {
 
 const formatName = (event) => {
     // Input must be of a valid number format or a modifier key, and not longer than ten digits
-    if(!isAlphabetInput(event) && !isModifierKey(event)){
+    if(!isAlphabetInput(event) && !isModifierKey(event) && !isAlphabetInputPhone(event)){
         event.preventDefault();
     }
 };
