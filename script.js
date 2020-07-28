@@ -1,8 +1,8 @@
 if (navigator.userAgent.match(/Android/i) == true ) {
-document.getElementById("NameError").innerHTML = "Phone"; 
+console.log("Phone"); 
 }
 else{
-document.getElementById("NameError").innerHTML = "Ph"; 
+console.log("PC"); 
 }
 
 
