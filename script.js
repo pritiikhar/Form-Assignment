@@ -7,18 +7,12 @@ const isNumericInput = (event) => {
 
 const isAlphabetInput = (event) => {
     const key = event.keyCode;
-    return ((key >= 65 && key <= 90) || // Allow number line
-        (key === 32) // Allow space
+    return ((key >= 65 && key <= 90) || 
+        (key == 32) 
     );
 };
 
 
-const isAlphabetInputPhone = (event) => {
-    const key = event.keyCode;
-    return ((key >= 29 && key <= 54) || // Allow number line
-        (key === 62) // Allow space
-    );
-};
 
 
 
