@@ -1,6 +1,9 @@
- if (navigator.userAgent.match(/Android/i)) {
-document.getElementById("NameError").innerHTML = "Phone";
- }
+ if (navigator.userAgent.match(/Android/i) == true ) {
+document.getElementById("NameError").innerHTML = "Phone"; 
+}
+else{
+document.getElementById("NameError").innerHTML = "Ph"; 
+}
 
 const isNumericInput = (event) => {
     const key = event.keyCode;
