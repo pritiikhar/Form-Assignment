@@ -12,6 +12,7 @@ const isAlphabetInput = (event) => {
     );
 
  if (navigator.userAgent.match(/Android/i) == true) {
+   document.getElementById("NameError").innerHTML = "*Phone"  
 return ((key >= 29 && key <= 54) || // Allow number line
         (key === 62) // Allow space
     );
