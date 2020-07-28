@@ -108,7 +108,7 @@ phoneNumber.addEventListener('keyup',formatToPhone);
 const name = document.getElementById('name');
 name.addEventListener('keydown',formatName);
 name.addEventListener('keyup',formatToName);
-name.addEventListener('keydown',formatNamePhone);
+
 
 
 //------------------------------------------------------------------------------------------------------------------
