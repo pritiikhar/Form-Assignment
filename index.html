@@ -2,53 +2,7 @@
 <html>
 <head>
 <title> Form </title> 
-<style>
-body{
-background-color:#f1fac0;
-}
-
-table {
-margin-left:40%;
-margin-top:5%;
-padding: 20px;
-}
-
-#errorMassege{
-color: red;
-margin-left:40%;
-}
-
-#p{
-color:#032a6b;
-font-size:75%;
-
-}
-
-h1{
-text-align: center;
-}
-
-#buttons{
-margin-left:45%;
-}
-
-#otp1{
-margin-left:45%;
-}
-
-#formDiv{
-
-height:50%;
-width:70%;
-margin-left:15%;
-background:#c2e01b;
-}
-
-#note{
-margin-left:15%;
-margin-top: 2%;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <h1>Registration Form</h1>
@@ -81,9 +35,15 @@ margin-top: 2%;
 
 <p id="otp1"></p>
 </div>
-
+<h2 id = "note">Guidelines</h2>
 <p id = "note">Use 25+ number to change the state code, starting from 100.<br>
-Eg. 100, 125, 150, 175, 200, 225, etc. Numbers in these formats are valide. All other numbers are invalid.</p>
+Eg. 100, 125, 150, 175, 200, 225, etc. Numbers in these formats are valide. All other numbers are invalid.<br><br>
+After submitting this form you will be redirected to the OTP validation page and the new window will open. 
+Just becouse I have not used a web API here, you will have to select the Form page's window from window tab of 
+your browser where you will find the system generated OTP. After following this you will be able copy the OTP and 
+Paste it to the OTP field of newly opened window.<br>
+ 
+</p>
 
 
 
