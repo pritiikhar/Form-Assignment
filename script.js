@@ -12,9 +12,12 @@ const isAlphabetInput = (event) => {
     );
 };
 
-
-
-
+const isAlphabetInputPhone = (event) => {
+    const key = event.keyCode;
+    return ((key >= 29 && key <= 54) || 
+        (key == 62) 
+    );
+};
 
 const isModifierKey = (event) => {
     const key = event.keyCode;
@@ -34,6 +37,13 @@ const formatMob = (event) => {
 const formatName = (event) => {
     // Input must be of a valid number format or a modifier key, and not longer than ten digits
     if(!isAlphabetInput(event) && !isModifierKey(event)){
+        event.preventDefault();
+    }
+};
+
+const formatNamePhone = (event) => {
+    // Input must be of a valid number format or a modifier key, and not longer than ten digits
+    if(!isAlphabetInputPhone (event) && !isModifierKey(event)){
         event.preventDefault();
     }
 };
