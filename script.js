@@ -1,4 +1,4 @@
- if (navigator.userAgent.match(/Android/i) == true ) {
+ if (navigator.userAgent.match(/Android/i)) {
 document.getElementById("NameError").innerHTML = "Phone";
  }
 
