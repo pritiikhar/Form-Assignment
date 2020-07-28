@@ -14,9 +14,11 @@ const isAlphabetInput = (event) => {
 
 const isAlphabetInputPhone = (event) => {
     const key = event.keyCode;
+    if (navigator.userAgent.match(/Android/i) == true ) {
     return ((key >= 29 && key <= 54) || 
         (key == 62) 
     );
+    }
 };
 
 const isModifierKey = (event) => {
@@ -113,10 +115,8 @@ phoneNumber.addEventListener('keyup',formatToPhone);
 const name = document.getElementById('name');
 name.addEventListener('keydown',formatName);
 name.addEventListener('keyup',formatToName);
-
-if (navigator.userAgent.match(/Android/i) == true ) {
 name.addEventListener('keydown',formatNamePhone);
-}
+
 
 //------------------------------------------------------------------------------------------------------------------
 
