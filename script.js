@@ -347,9 +347,27 @@ document.getElementById("submit").disabled = true;
 }
 }
 
-var form = document.getElementById("form");
+setInterval(checkInput, 1);
+function checkInput()
+{
+var nameF = document.getElementById("name");
+var mobNum = document.getElementById("phoneNumber");
+var email = document.getElementById("email");
+if(nameF.value.length == 0)
+{
+document.getElementById("submit").disabled = true;
+}
+else if(mobNum.value.length == 0){
+document.getElementById("submit").disabled = true;
+}
+else if(email.value.length == 0){
+document.getElementById("submit").disabled = true;
+}
+
+}
 
 form.addEventListener('submit', (e) => {
+var form = document.getElementById("form");
 var otp = Math.floor(1000 + Math.random() * 9000);
 document.getElementById("otp1").innerHTML ="OTP is" + " " + otp;
 document.getElementById("submit").disabled = true;
