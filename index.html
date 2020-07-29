@@ -1,7 +1,7 @@
 <!docktype html>
 <html>
 <head>
-<title> Form </title>
+<title> Form </title> 
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -19,9 +19,9 @@
 
 
 <td><label for="mobileNum" name = "mobile">Mobile Number</label></td>
-<td><input id="phoneNumber" required type = "text" maxlength = "14"/></td>   
-<td><img id="comLogo" src="" width="107" height="98" style = "display:none; width:7%; height:7%; padding:0px">
-<p id = "p" style = "display:inline" > </p> </td></tr>
+<td><input id="phoneNumber" type = "text" maxlength = "14" required/></td>   
+<td><img id="comLogo" src="" width="107" height="98" style = "display:none; width:5%; height:5%; padding:0px">
+<p id = "stateName" style = "display:inline" > </p> </td></tr>
 </table>
 
 <div id = "buttons">
@@ -30,27 +30,23 @@
 
 <div id = "errorMassege">
 <p id = "NameError"></p>
-<p id = "Name_Error"></p>
-<p id = "error"></p>
+<p id = "error"></p> 
 <p id = "erroR"></p> 
- </div>
+</div>
 </form>
 
 <p id="otp1"></p>
+<p id="n"></p>
 </div>
 <h2 id = "note">Guidelines</h2>
 <p id = "note">Use 25+ number to change the state code, starting from 100.<br>
 Eg. 100, 125, 150, 175, 200, 225, etc. Numbers in these formats are valide. All other numbers are invalid.<br><br>
-After submitting this form you will be redirected to the OTP validation page and the new tab will open. 
-Just becouse I have not used a web API here, you will have to select the Form page's tab from  your browser where 
-you will find the system generated OTP. After following this you will be able copy the OTP and 
-paste it to the OTP field of newly opened tab.<br><br>
- 
+After submitting this form you will be redirected to the OTP validation page and the new window will open. 
+Just becouse I have not used a web API here, you will have to select the Form page's window from window tab of 
+your browser where you will find the system generated OTP. After following this you will be able copy the OTP and 
+Paste it to the OTP field of newly opened window.<br>
 </p>
-
-
-
-<script src = "script.js">
+<script src = "git.js">
 </script>
 
 </body>
