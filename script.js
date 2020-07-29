@@ -77,15 +77,6 @@ if(isModifierKey(event)) {return;}
 }
     else if(input.length > 0){target.value = `(${zip}`;}
     logoState();
-    if(value.length == 14){
- document.getElementById("otp1").innerHTML = "";
- document.getElementById("submit").disabled = false; 
-}
-else{
-document.getElementById("otp1").innerHTML = "Enter a valid 10 digit  mobile number";
-document.getElementById("submit").disabled = true; 
-}
-    
 };
 
 //Name Validation
@@ -335,12 +326,17 @@ document.getElementById("p").innerHTML = "Puducherry";
 document.getElementById("error").style.display = "none";
 document.getElementById("submit").disabled = false;
 }
+else if(value.length == 14){
+ document.getElementById("erroR").innerHTML = "";
+ document.getElementById("submit").disabled = false; 
+}
 else {
 document.getElementById("comLogo").style.display = "none";
 document.getElementById("error").innerHTML = "*Invalid Mobile Number";
 document.getElementById("p").innerHTML = "";
 document.getElementById("error").style.display = "block";
 document.getElementById("submit").disabled = true;
+document.getElementById("erroR").innerHTML = "*Enter a valide 10 digit mobile number";
 }
 }
 
