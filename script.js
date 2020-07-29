@@ -47,7 +47,7 @@ const formatToPhone = (event) => {
 if(isModifierKey(event)) {return;}
     
     var mobNo = document.getElementById("phoneNumber");
-    var mobEx = ^[0-9]*$;
+    var mobEx = /^[0-9]*$/;
     if (mobEx.test(mobNo.value) == false)   
         {  
               document.getElementById("error").style.display = "block"; 
