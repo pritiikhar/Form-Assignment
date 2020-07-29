@@ -45,21 +45,7 @@ const formatName = (event) => {
 const formatToPhone = (event) => {
 
 if(isModifierKey(event)) {return;}
-    
-    var mobNo = document.getElementById("phoneNumber");
-    var mobEx = /^[0-9]*$/;
-    if (mobEx.test(mobNo.value) == false)   
-        {  
-              document.getElementById("error").style.display = "block"; 
-              document.getElementById("error").innerHTML = "*Mobile Number should conatain only numbers";
-              document.getElementById("submit").disabled = true;  
-        } 
-    else {
-         document.getElementById("error").style.display = "none"; 
-         document.getElementById("submit").disabled = false;  
-    }
-    
-    
+   
     const target = event.target;
     value = target.value;
     const input = target.value.replace(/\D/g,'').substring(0,10); // First ten digits of input only
