@@ -63,12 +63,9 @@ if(input.length >= 6){target.value = `(${zip})-${middle}-${last}`;
 }
     else if(input.length > 0){target.value = `(${zip}`;}
 
-mobOptr();
+
 displayStateName();
    
-(mobValue.length == 14)?((erroR.innerHTML = ""), (submit.disabled = false)): ((erroR.innerHTML = "Enter a valid 10 digit  mobile number"),(submit.disabled = true));
-
-
 
 (620 <= zip && zip < 800)?((logo.style.display = "inline-block"),(logo.src = "jio.png"), (error.innerHTML = " ")):
 (800 <= zip && zip <= 919)?((logo.style.display = "inline-block"),(logo.src = "idea.png"), (error.innerHTML = " ")):
@@ -96,24 +93,13 @@ char = word[i].length;
 ((nameError.innerHTML = ""),(submit.disabled = false),(name_Error.innerHTML = ""));
 } 
 };
-// ----------------------------------------------------Validates input fields on pressing or realising key------------------------------------------------------------
+// ----------------------------------------------------Validates input fields on pressing or realising key Function call------------------------------------------------------------
 
 phoneNumber.addEventListener('keydown',formatMob);
 phoneNumber.addEventListener('keyup',formatToPhone);
 
 name.addEventListener('keydown',formatName);
 name.addEventListener('keyup',formatToName);
-
-//-------------------------------------------------Displays logo-----------------------------------------------------------------
-function mobOptr(){
-var logo = document.getElementById("comLogo");
-
-(620 <= zip && zip < 800)?((logo.style.display = "inline-block"),(logo.src = "jio.png"), (error.innerHTML = " ")):
-(800 <= zip && zip <= 919)?((logo.style.display = "inline-block"),(logo.src = "idea.png"), (error.innerHTML = " ")):
-(920 < zip && zip <= 1000)?((logo.style.display = "inline-block"),(logo.src = "vodafone.png"), (error.innerHTML = " ")):
-((submit.disabled = true),(error.innerHTML = "*Invalid Mobile Number"),(logo.style.display = "none"));
-
-}
 
 //----------------------------------------------Displays state name------------------------------------------------------------------------------------------------------------------
 function displayStateName(){
@@ -128,8 +114,8 @@ stateName[675] = 'Telangana', stateName[700] = 'Tripura', stateName[725] = 'Utta
 stateName[800] = 'Andaman and Nicobar', stateName[825] = 'Chandigarh', stateName[850] = 'Daman and Diu & Dadar and Nagar Haveli', stateName[875] = 'Delhi', 
 stateName[900] = 'Jammu and Kashmir', stateName[925] = 'Ladakh', stateName[950] = 'Lakshadweep', stateName[975] = 'Puducherry';
 
-(stateName[middle] === undefined ) ? ((error.innerHTML = "*Invalid Mobile Number"),(submit.disabled = true), (statename.innerHTML = " ")):
-((statename.innerHTML = stateName[middle]),(submit.disabled = false));
+(stateName[middle] === undefined ) ? ((erroR.innerHTML = "*Invalid Mobile Number"),(submit.disabled = true), (statename.innerHTML = " ")):
+((statename.innerHTML = stateName[middle]), (erroR.innerHTML = ""));
 
 }
 
