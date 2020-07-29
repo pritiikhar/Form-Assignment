@@ -115,8 +115,8 @@ if(word[i].length<4){
   document.getElementById("NameError").style.display = "block";
   document.getElementById("submit").disabled = true;
   }
-}   
- if (nameEx.test(name.value.toUpperCase()) == false ) {
+   
+ else if (nameEx.test(name.value.toUpperCase()) == false ) {
  document.getElementById("Name_Error").innerHTML = "*Name should contain alphabets and spaces only";
  document.getElementById("submit").disabled = true;  
 }
@@ -124,6 +124,7 @@ if(word[i].length<4){
         document.getElementById("Name_Error").innerHTML = " "; 
         document.getElementById("submit").disabled = false; 
     }
+}
 };
 
 
