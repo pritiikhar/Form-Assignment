@@ -128,6 +128,7 @@ name.addEventListener('keyup',formatToName);
 //------------------------------------------------------------------------------------------------------------------
 
 function logoState(){
+ var num = document.getElementById("phoneNumer").value; 
  if(620 < zip && zip < 800){
  document.getElementById("comLogo").style.display = "inline-block";
  document.getElementById("comLogo").src = "jio.png";
@@ -326,7 +327,7 @@ document.getElementById("p").innerHTML = "Puducherry";
 document.getElementById("error").style.display = "none";
 document.getElementById("submit").disabled = false;
 }
-else if(value.length == 14){
+else if(num.length == 14){
  document.getElementById("erroR").innerHTML = "";
  document.getElementById("submit").disabled = false; 
 }
