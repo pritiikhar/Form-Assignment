@@ -63,7 +63,8 @@ if(isModifierKey(event)) {return;}
 }
     else if(input.length > 0){target.value = `(${zip}`;}
 
-logoState();
+mobOptr();
+stateName();
     
     if(value.length == 14){
  document.getElementById("otp1").innerHTML = "";
@@ -122,7 +123,31 @@ name.addEventListener('keydown',formatName);
 name.addEventListener('keyup',formatToName);
 
 //------------------------------------------------------------------------------------------------------------------
+function mobOptr(){
+if(620 < zip && zip < 800){
+ document.getElementById("comLogo").style.display = "inline-block";
+ document.getElementById("comLogo").src = "jio.png";
+ document.getElementById("error").innerHTML = " ";
+}
+else if(800 < zip && zip < 919){
+ document.getElementById("comLogo").style.display = "inline-block";
+ document.getElementById("comLogo").src = "idea.png";
+ document.getElementById("error").innerHTML = " ";
+}
+else if(920 < zip && zip < 1000){
+ document.getElementById("comLogo").style.display = "inline-block";
+ document.getElementById("comLogo").src = "vodafone.png";
+ document.getElementById("error").innerHTML = " ";
+}
+else {
+document.getElementById("comLogo").style.display = "none";
+document.getElementById("error").style.display = "block";
+document.getElementById("error").innerHTML = "*Invalid Mobile Number";
 
+}
+}
+
+//------------------------------------------------------------------------------------------------------------------
 function logoState(){
  var num = document.getElementById("phoneNumer").value; 
  if(620 < zip && zip < 800){
