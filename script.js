@@ -53,6 +53,7 @@ middle = input.substring(3,6);
 const last = input.substring(6,10);
 let erroR = document.getElementById("erroR");
 var logo = document.getElementById("comLogo");
+var error_10digi = document.getElementById("error_10digi");
 
 if(isModifierKey(event)) {return;}
 if(input.length >= 6){target.value = `(${zip})-${middle}-${last}`;
@@ -66,12 +67,12 @@ if(input.length >= 6){target.value = `(${zip})-${middle}-${last}`;
 
 displayStateName();
    
+(mobValue.length == 14)?((error_10digi.innerHTML = " "),(submit.disabled = false)):((error_10digi.innerHTML = "*Enter 10 Mobile No."));
 
 (620 <= zip && zip < 800)?((logo.style.display = "inline-block"),(logo.src = "jio.png"), (error.innerHTML = " ")):
 (800 <= zip && zip <= 919)?((logo.style.display = "inline-block"),(logo.src = "idea.png"), (error.innerHTML = " ")):
 (920 < zip && zip <= 1000)?((logo.style.display = "inline-block"),(logo.src = "vodafone.png"), (error.innerHTML = " ")):
-(mobValue.length == 14)?((error.innerHTML = " "),(submit.disabled = false)):
-((submit.disabled = true),(error.innerHTML = "*Enter a valid 10 digit  mobile number"),(logo.style.display = "none"));
+((submit.disabled = true),(error.innerHTML = "*Check starting 3 digits of mobile number"),(logo.style.display = "none"));
 
 };
 //-----------------------------------------------------------Name Validation-----------------------------------------------------------------------------------------------------
@@ -114,7 +115,7 @@ stateName[675] = 'Telangana', stateName[700] = 'Tripura', stateName[725] = 'Utta
 stateName[800] = 'Andaman and Nicobar', stateName[825] = 'Chandigarh', stateName[850] = 'Daman and Diu & Dadar and Nagar Haveli', stateName[875] = 'Delhi', 
 stateName[900] = 'Jammu and Kashmir', stateName[925] = 'Ladakh', stateName[950] = 'Lakshadweep', stateName[975] = 'Puducherry';
 
-(stateName[middle] === undefined ) ? ((erroR.innerHTML = "*Invalid Mobile Number"),(submit.disabled = true), (statename.innerHTML = " ")):
+(stateName[middle] === undefined ) ? ((erroR.innerHTML = "*Check middle 3 Mobile Number"),(submit.disabled = true), (statename.innerHTML = " ")):
 ((statename.innerHTML = stateName[middle]), (erroR.innerHTML = ""));
 
 }
