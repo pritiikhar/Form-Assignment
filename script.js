@@ -148,27 +148,8 @@ document.getElementById("error").innerHTML = "*Invalid Mobile Number";
 }
 
 //---------------------------------------------------------------------------------------------------------------------
-function logoState(){
- var num = document.getElementById("phoneNumer").value; 
- if(620 < zip && zip < 800){
- document.getElementById("comLogo").style.display = "inline-block";
- document.getElementById("comLogo").src = "jio.png";
- document.getElementById("submit").disabled = false;
- document.getElementById("error").style.display = "none";
-}
-else if(800 < zip && zip < 919){
- document.getElementById("comLogo").style.display = "inline-block";
- document.getElementById("comLogo").src = "idea.png";
- document.getElementById("submit").disabled = false;
- document.getElementById("error").style.display = "none";
-}
-else if(920 < zip && zip < 1000){
- document.getElementById("comLogo").style.display = "inline-block";
- document.getElementById("comLogo").src = "vodafone.png";
- document.getElementById("submit").disabled = false;
- document.getElementById("error").style.display = "none";
-}
-else if(middle == 100){
+function stateName(){
+ if(middle == 100){
  document.getElementById("p").innerHTML = "Andhra Pradesh";
  document.getElementById("error").style.display = "none";
  document.getElementById("submit").disabled = false;
