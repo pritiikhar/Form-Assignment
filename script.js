@@ -70,13 +70,14 @@ if(isModifierKey(event)) {return;}
    
 
     if(input.length >= 6){target.value = `(${zip})-${middle}-${last}`;
-    stateNum();
+    
 }
     else if(input.length >= 3){target.value = `(${zip}) - ${middle}`;
-    mobOptr();
+    
 }
     else if(input.length > 0){target.value = `(${zip}`;}
-    
+    mobOptr();
+    stateNum();
     if(value.length == 14){
  document.getElementById("otp1").innerHTML = "";
  document.getElementById("submit").disabled = false; 
@@ -156,6 +157,7 @@ else if(920 < zip && zip < 1000){
  document.getElementById("error").style.display = "none";
 }
 else {
+document.getElementById("comLogo").style.display = "none";
 document.getElementById("error").style.display = "block";
 document.getElementById("error").innerHTML = "*Invalid Mobile Number";
 document.getElementById("submit").disabled = true;
@@ -347,6 +349,7 @@ document.getElementById("submit").disabled = false;
 }
 else {
 document.getElementById("error").innerHTML = "*Invalid Mobile Number";
+document.getElementById("p").innerHTML = "";
 document.getElementById("error").style.display = "block";
 document.getElementById("submit").disabled = true;
 }
