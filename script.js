@@ -62,7 +62,8 @@ if(isModifierKey(event)) {return;}
     
 }
     else if(input.length > 0){target.value = `(${zip}`;}
-    logoState();
+}
+logoState();
 };
 
 //Name Validation
