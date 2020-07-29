@@ -136,12 +136,6 @@ name.addEventListener('keyup',formatToName);
 
 //------------------------------------------------------------------------------------------------------------------
 
-function mobOptr(){
-
-}
-
-//------------------------------------------------------------------------------------------------------------------
-
 function logoState(){
  if(620 < zip && zip < 800){
  document.getElementById("comLogo").style.display = "inline-block";
