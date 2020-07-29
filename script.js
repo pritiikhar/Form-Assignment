@@ -104,13 +104,12 @@ document.getElementById("submit").disabled = true;
 }
      else if (nameEx.test(name.value.toUpperCase()) == false ) {
  document.getElementById("Name_Error").innerHTML = "*Name should contain alphabets and spaces only";
- document.getElementById("submit").disabled = true; 
-}
-   
+ document.getElementById("submit").disabled = true;
+}   
 else
 {
 document.getElementById("NameError").style.display = "none";
-document.getElementById("submit").disabled = false;
+ document.getElementById("submit").disabled = false;
 }
 
 for(i = 0; i < word.length; i++){
