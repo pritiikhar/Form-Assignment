@@ -121,7 +121,8 @@ if(word[i].length<4){
  document.getElementById("submit").disabled = true;  
 }
     else{
-        document.getElementById("Name_Error").style.display = ""; 
+        document.getElementById("Name_Error").innerHTML = " "; 
+        document.getElementById("submit").disabled = false; 
     }
 };
 
