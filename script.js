@@ -47,7 +47,7 @@ const formatToPhone = (event) => {
 if(isModifierKey(event)) {return;}
     
     var mobNo = document.getElementById("phoneNumber");
-    var mobEx = /^\d{10}$/;
+    var mobEx = /^(\d)$/;
     if (mobEx.test(mobNo.value) == false)   
         {  
               document.getElementById("error").style.display = "block"; 
@@ -76,6 +76,15 @@ if(isModifierKey(event)) {return;}
     mobOptr();
 }
     else if(input.length > 0){target.value = `(${zip}`;}
+    
+    if(value.length == 14){
+ document.getElementById("otp1").innerHTML = "";
+ document.getElementById("submit").disabled = false; 
+}
+else{
+document.getElementById("otp1").innerHTML = "Enter a valid 10 digit  mobile number";
+document.getElementById("submit").disabled = true; 
+}
     
 };
 
