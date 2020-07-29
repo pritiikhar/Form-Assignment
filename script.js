@@ -67,11 +67,11 @@ mobOptr();
 stateName();
     
     if(value.length == 14){
- document.getElementById("otp1").innerHTML = "";
+ document.getElementById("erroR").innerHTML = "";
  document.getElementById("submit").disabled = false; 
 }
 else{
-document.getElementById("otp1").innerHTML = "Enter a valid 10 digit  mobile number";
+document.getElementById("erroR").innerHTML = "Enter a valid 10 digit  mobile number";
 document.getElementById("submit").disabled = true; 
 }
 };
@@ -335,7 +335,6 @@ document.getElementById("error").innerHTML = "*Invalid Mobile Number";
 document.getElementById("p").innerHTML = "";
 document.getElementById("error").style.display = "block";
 document.getElementById("submit").disabled = true;
-document.getElementById("erroR").innerHTML = "*Enter a valide 10 digit mobile number";
 }
 }
 
