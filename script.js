@@ -76,8 +76,7 @@ if(isModifierKey(event)) {return;}
     
 }
     else if(input.length > 0){target.value = `(${zip}`;}
-    mobOptr();
-    stateNum();
+    logoState();
     if(value.length == 14){
  document.getElementById("otp1").innerHTML = "";
  document.getElementById("submit").disabled = false; 
@@ -138,7 +137,13 @@ name.addEventListener('keyup',formatToName);
 //------------------------------------------------------------------------------------------------------------------
 
 function mobOptr(){
-if(620 < zip && zip < 800){
+
+}
+
+//------------------------------------------------------------------------------------------------------------------
+
+function logoState(){
+ if(620 < zip && zip < 800){
  document.getElementById("comLogo").style.display = "inline-block";
  document.getElementById("comLogo").src = "jio.png";
  document.getElementById("submit").disabled = false;
@@ -156,18 +161,7 @@ else if(920 < zip && zip < 1000){
  document.getElementById("submit").disabled = false;
  document.getElementById("error").style.display = "none";
 }
-else {
-document.getElementById("comLogo").style.display = "none";
-document.getElementById("error").style.display = "block";
-document.getElementById("error").innerHTML = "*Invalid Mobile Number";
-document.getElementById("submit").disabled = true;
-}
-}
-
-//------------------------------------------------------------------------------------------------------------------
-
-function stateNum(){
-if(middle == 100){
+else if(middle == 100){
  document.getElementById("p").innerHTML = "Andhra Pradesh";
  document.getElementById("error").style.display = "none";
  document.getElementById("submit").disabled = false;
@@ -348,6 +342,7 @@ document.getElementById("error").style.display = "none";
 document.getElementById("submit").disabled = false;
 }
 else {
+document.getElementById("comLogo").style.display = "none";
 document.getElementById("error").innerHTML = "*Invalid Mobile Number";
 document.getElementById("p").innerHTML = "";
 document.getElementById("error").style.display = "block";
