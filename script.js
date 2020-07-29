@@ -102,10 +102,6 @@ if (word.length<2) {
 document.getElementById("NameError").innerHTML = "*Name should contain atleast two words";
 document.getElementById("submit").disabled = true;
 }
-     else if (nameEx.test(name.value.toUpperCase()) == false ) {
- document.getElementById("Name_Error").innerHTML = "*Name should contain alphabets and spaces only";
- document.getElementById("submit").disabled = true;
-}   
 else
 {
 document.getElementById("NameError").style.display = "none";
@@ -119,6 +115,10 @@ if(word[i].length<4){
   document.getElementById("NameError").style.display = "block";
   document.getElementById("submit").disabled = true;
   }
+ else if (nameEx.test(name.value.toUpperCase()) == false ) {
+ document.getElementById("Name_Error").innerHTML = "*Name should contain alphabets and spaces only";
+ document.getElementById("submit").disabled = true;
+}   
 else{
         document.getElementById("NameError").style.display = "none";
         document.getElementById("submit").disabled = false;
