@@ -115,6 +115,7 @@ else if (nameEx.test(name.value.toUpperCase()) == false ) {
 }  
 else{
 document.getElementById("NameError").innerHTML = "";
+document.getElementById("Name_Error").innerHTML = "";   
 document.getElementById("submit").disabled = false;
 }
 }    
